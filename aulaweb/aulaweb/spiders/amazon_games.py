@@ -1,5 +1,7 @@
 import scrapy
 
+import pudb; pudb.set_trace()
+
 class AmazonGamesSpider(scrapy.Spider):
     name = "amazon_games"
     start_urls=["https://www.amazon.com.br/games"]

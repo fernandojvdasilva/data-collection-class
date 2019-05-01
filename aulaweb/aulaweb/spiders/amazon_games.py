@@ -8,8 +8,11 @@ class AmazonGamesSpider(scrapy.Spider):
 
 
     def parse(self, response):
-        html_file = open('amazon_games.html', 'w')
+        html_file = open('amazon_games.csv', 'w')
 
-        html_file.write(str(response.body))
+        game_names = response.css('h2::text').getall()
+
+        for name in game_names:
+            html_file.write(name + '\n')
 
         html_file.close()

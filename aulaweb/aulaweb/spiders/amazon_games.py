@@ -24,8 +24,9 @@ class AmazonGamesSpider(scrapy.Spider):
         next_url = response.xpath('//a[@id="pagnNextLink"]/@href').get()
 
         if not next_url is None:
-            next_url = response.urljoin(next_url)
-            yield scrapy.Request(next_url, callback=self.parseNextPage)
+            yield response.follow(next_url, callback=self.parseNextPage)
+            #next_url = response.urljoin(next_url)
+            #yield scrapy.Request(next_url, callback=self.parseNextPage)
 
     # As páginas seguintes são diferentes, precisamos usar outra função de parser
     def parseNextPage(self, response):
@@ -45,5 +46,6 @@ class AmazonGamesSpider(scrapy.Spider):
         next_url = response.xpath('//li[@class="a-last"]/a/@href').get()
 
         if not next_url is None:
-            next_url = response.urljoin(next_url)
-            yield scrapy.Request(next_url, callback=self.parseNextPage)
+            yield response.follow(next_url, callback=self.parseNextPage)
+        #    next_url = response.urljoin(next_url)
+        #    yield scrapy.Request(next_url, callback=self.parseNextPage)

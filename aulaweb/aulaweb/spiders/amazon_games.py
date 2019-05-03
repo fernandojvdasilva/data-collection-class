@@ -15,9 +15,17 @@ class AmazonGamesSpider(scrapy.Spider):
         # Extraindo o nome dos jogos e salvando no arquivo CSV
         game_names = response.xpath('//div[@class="s-item-container"]//h2/text()').getall()
         game_prices = response.xpath('//div[@class="s-item-container"]//span[contains(@class, "s-price")]/text()').getall()
+        game_platforms = response.xpath('//div[@class="s-item-container"]//h3/text()').getall()
 
-        for name, price in zip(game_names, game_prices):
-            csv_file.write('%s;%s\n' % (name, price) )
+        len(game_names)
+        len(game_prices)
+        len(game_platforms)
+
+        for name, price, plat in zip(game_names, game_prices, game_platforms):
+            # Ignorando quando não houver plataforma
+            if plat in ['Branco', 'Preto']:
+                plat = ''
+            csv_file.write('%s;%s;%s\n' % (name, price, plat) )
 
         csv_file.close()
 
@@ -29,6 +37,7 @@ class AmazonGamesSpider(scrapy.Spider):
             #next_url = response.urljoin(next_url)
             #yield scrapy.Request(next_url, callback=self.parseNextPage)
 
+
     # As páginas seguintes são diferentes, precisamos usar outra função de parser
     def parseNextPage(self, response):
 
@@ -38,9 +47,17 @@ class AmazonGamesSpider(scrapy.Spider):
         # Extraímos os nomes de jogos
         game_names = response.xpath('//span[contains(@class,"a-text-normal")]/text()').getall()
         game_prices = response.xpath('//div[@class="sg-row"]//span[contains(@class, "a-price")]/span[@class="a-offscreen"]/text()').getall()
+        game_platforms = response.xpath('//div[@class="sg-row"]//div[contains(@class,"a-section")]//a[contains(@class, "a-link-normal a-text-bold")]/text()').getall()
 
-        for name, price in zip(game_names, game_prices):
-            csv_file.write('%s;%s\n' % (name, price))
+        print(len(game_names))
+        print(len(game_prices))
+        print(len(game_platforms))
+
+        for name, price, plat in zip(game_names, game_prices, game_platforms):
+            plat = plat.replace('\n', '')
+            plat = plat.replace(' ', '')
+            plat = plat.replace('\t', '')
+            csv_file.write('%s;%s;%s\n' % (name, price, plat))
 
         csv_file.close()
 

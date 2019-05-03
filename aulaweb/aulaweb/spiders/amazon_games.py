@@ -13,10 +13,11 @@ class AmazonGamesSpider(scrapy.Spider):
         csv_file = open('amazon_games.csv', 'w')
 
         # Extraindo o nome dos jogos e salvando no arquivo CSV
-        game_names = response.css('h2::text').getall()
+        game_names = response.xpath('//div[@class="s-item-container"]//h2/text()').getall()
+        game_prices = response.xpath('//div[@class="s-item-container"]//span[contains(@class, "s-price")]/text()').getall()
 
-        for name in game_names:
-            csv_file.write(name + '\n')
+        for name, price in zip(game_names, game_prices):
+            csv_file.write('%s;%s\n' % (name, price) )
 
         csv_file.close()
 
@@ -36,9 +37,10 @@ class AmazonGamesSpider(scrapy.Spider):
 
         # Extraímos os nomes de jogos
         game_names = response.xpath('//span[contains(@class,"a-text-normal")]/text()').getall()
+        game_prices = response.xpath('//div[@class="sg-row"]//span[contains(@class, "a-price")]/span[@class="a-offscreen"]/text()').getall()
 
-        for name in game_names:
-            csv_file.write(name + '\n')
+        for name, price in zip(game_names, game_prices):
+            csv_file.write('%s;%s\n' % (name, price))
 
         csv_file.close()
 

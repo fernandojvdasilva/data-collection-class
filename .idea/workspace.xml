@@ -16,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/aulaweb/aulaweb/spiders/amazon_games.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="47" column="32" selection-start-line="47" selection-start-column="32" selection-end-line="47" selection-end-column="32" />
+            <state relative-caret-position="195">
+              <caret line="18" column="56" lean-forward="true" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -118,7 +118,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -148,6 +147,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -234,7 +234,14 @@
       <option name="project" value="LOCAL" />
       <updated>1556828882993</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Utilizando função &quot;follow()&quot; para fazer novas requisições.">
+      <created>1556830491055</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1556830491055</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -266,7 +273,8 @@
     <MESSAGE value="Extraindo os nomes dos jogos existentes na página" />
     <MESSAGE value="Scripts usados durante as aulas" />
     <MESSAGE value="Coletando nome dos jogos em todas as páginas." />
-    <option name="LAST_COMMIT_MESSAGE" value="Coletando nome dos jogos em todas as páginas." />
+    <MESSAGE value="Utilizando função &quot;follow()&quot; para fazer novas requisições." />
+    <option name="LAST_COMMIT_MESSAGE" value="Utilizando função &quot;follow()&quot; para fazer novas requisições." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -282,8 +290,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/aulaweb/aulaweb/spiders/amazon_games.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="47" column="32" selection-start-line="47" selection-start-column="32" selection-end-line="47" selection-end-column="32" />
+        <state relative-caret-position="195">
+          <caret line="18" column="56" lean-forward="true" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>

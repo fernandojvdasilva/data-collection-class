@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0b2666d6-483f-4b08-97d5-bbd9e423a701" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aulaweb/aulaweb/spiders/amazon_games.py" beforeDir="false" afterPath="$PROJECT_DIR$/aulaweb/aulaweb/spiders/amazon_games.py" afterDir="false" />
-    </list>
+    <list default="true" id="0b2666d6-483f-4b08-97d5-bbd9e423a701" name="Default Changelist" comment="Requisição à URL dinâmica, passando parâmetros" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +13,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/aulaweb/aulaweb/spiders/amazon_games.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
+            <state relative-caret-position="220">
+              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -248,7 +245,14 @@
       <option name="project" value="LOCAL" />
       <updated>1556908982625</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Requisição à URL dinâmica, passando parâmetros">
+      <created>1556939141766</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1556939141766</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -282,7 +286,8 @@
     <MESSAGE value="Coletando nome dos jogos em todas as páginas." />
     <MESSAGE value="Utilizando função &quot;follow()&quot; para fazer novas requisições." />
     <MESSAGE value="Obtendo preços dos jogos." />
-    <option name="LAST_COMMIT_MESSAGE" value="Obtendo preços dos jogos." />
+    <MESSAGE value="Requisição à URL dinâmica, passando parâmetros" />
+    <option name="LAST_COMMIT_MESSAGE" value="Requisição à URL dinâmica, passando parâmetros" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -340,6 +345,41 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aulaweb/aulaweb/amazon_games.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="31" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
+        </state>
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3">
+          <column index="0" width="100" />
+          <column index="1" width="100" />
+          <column index="2" width="100" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aulaweb/aulaweb/spiders/amazon_games.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="62" column="72" lean-forward="true" selection-start-line="44" selection-start-column="8" selection-end-line="62" selection-end-column="72" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aulaweb/aulaweb/spiders/amazon_search.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

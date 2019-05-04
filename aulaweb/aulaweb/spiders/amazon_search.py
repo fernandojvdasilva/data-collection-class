@@ -3,23 +3,27 @@ from scrapy import Request
 from w3lib.url import add_or_replace_parameters
 
 from scrapy import Selector
-from scrapy.http import FormRequest
+
 
 import pudb; pudb.set_trace()
 
-class AmazonGamesSpider(scrapy.Spider):
+class AmazonSearchSpider(scrapy.Spider):
     name = "amazon_search"
+
+    def __init__(self, q='', cat=''):
+        self.query = q
+        self.category = cat
 
     def start_requests(self):
 
         first_url = 'https://www.amazon.com.br/s'
 
         pars = {
-            'k': 'fifa',
-            'i': 'videogames'
+            'k': self.query,
+            'i': self.category
         }
 
-        yield FormRequest(first_url, callback=self.parse, formdata=pars)
+        yield Request(add_or_replace_parameters(first_url, pars), callback=self.parse)
 
 
     def parse(self, response):

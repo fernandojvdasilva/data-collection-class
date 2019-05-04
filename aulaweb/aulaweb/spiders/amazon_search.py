@@ -3,7 +3,7 @@ from scrapy import Request
 from w3lib.url import add_or_replace_parameters
 
 from scrapy import Selector
-
+from scrapy.http import FormRequest
 
 import pudb; pudb.set_trace()
 
@@ -19,7 +19,7 @@ class AmazonGamesSpider(scrapy.Spider):
             'i': 'videogames'
         }
 
-        yield Request(add_or_replace_parameters(first_url, pars), callback=self.parse)
+        yield FormRequest(first_url, callback=self.parse, formdata=pars)
 
 
     def parse(self, response):

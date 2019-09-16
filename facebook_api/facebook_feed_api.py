@@ -2,7 +2,7 @@ import facebook
 
 import pprint
 
-token='EAAJ3Jw24uAEBAA3FX0qAdd5rWJ0IFPH70jSZB6ZB4mFbNv4ZBQZCvXsjBKnkzbO45SyyZA5FF74NnxRZAbTt8A10KOJXdRqP3bpWZAGni3uUz3MeNzroJ9uBZA7iZCmj0Q1QphtSttPlTfgfTvkrW4OrSgkBkedXHOliJlDF7NcVvnMI6SKL33jRaQ0o7lVhdZCmQZD'
+token=''
 
 graph_api = facebook.GraphAPI(access_token=token,
                               version='3.1')
